@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{99F8802B-4AF3-44BC-B59A-4D64402A077A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OOP</RootNamespace>
+    <AssemblyName>OOP</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MyDB">
+      <HintPath>..\MyDB\bin\Debug\net6.0\MyDB.dll</HintPath>
+    </Reference>
+    <Reference Include="Select">
+      <HintPath>Select\bin\Debug\net6.0\Select.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="db_properties.cs" />
+    <Compile Include="db_sqlcommand.cs" />
+    <Compile Include="db_view.cs" />
+    <Compile Include="Item\frm_item_brand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item\frm_item_brand.Designer.cs">
+      <DependentUpon>frm_item_brand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item\frm_item_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item\frm_item_category.Designer.cs">
+      <DependentUpon>frm_item_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\Customer\frm_create_customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\Customer\frm_create_customer.Designer.cs">
+      <DependentUpon>frm_create_customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\Employee\frm_create_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\Employee\frm_create_employee.Designer.cs">
+      <DependentUpon>frm_create_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\Employee\frm_view_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\Employee\frm_view_employee.Designer.cs">
+      <DependentUpon>frm_view_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_employee.Designer.cs">
+      <DependentUpon>frm_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_setting.Designer.cs">
+      <DependentUpon>frm_setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Group\frm_create_brand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Group\frm_create_brand.Designer.cs">
+      <DependentUpon>frm_create_brand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Group\frm_create_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Group\frm_create_category.Designer.cs">
+      <DependentUpon>frm_create_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IGeneral.cs" />
+    <Compile Include="Item\frm_create_item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item\frm_create_item.Designer.cs">
+      <DependentUpon>frm_create_item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item\frm_view_item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item\frm_view_item.Designer.cs">
+      <DependentUpon>frm_view_item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\Sale\frm_create_sale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\Sale\frm_create_sale.Designer.cs">
+      <DependentUpon>frm_create_sale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stocks\ViewStockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stocks\ViewStockForm.Designer.cs">
+      <DependentUpon>ViewStockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validation\Employee\Employee.cs" />
+    <Compile Include="People\Employee\frm_emp_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\Employee\frm_emp_form.Designer.cs">
+      <DependentUpon>frm_emp_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Item\frm_item_brand.resx">
+      <DependentUpon>frm_item_brand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item\frm_item_category.resx">
+      <DependentUpon>frm_item_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item\frm_view_item.resx">
+      <DependentUpon>frm_view_item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\Employee\frm_create_employee.resx">
+      <DependentUpon>frm_create_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\Employee\frm_emp_form.resx">
+      <DependentUpon>frm_emp_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_setting.resx">
+      <DependentUpon>frm_setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\Customer\frm_create_customer.resx">
+      <DependentUpon>frm_create_customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\Sale\frm_create_sale.resx">
+      <DependentUpon>frm_create_sale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Stocks\ViewStockForm.resx">
+      <DependentUpon>ViewStockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DB\" />
+    <Folder Include="General\" />
+    <Folder Include="People\Vendor\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
